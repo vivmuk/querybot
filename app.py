@@ -232,13 +232,13 @@ if data_exists:
                 
     except ImportError:
         # Fallback questions
-        example_questions = [
-            "Summarize the data",
+    example_questions = [
+        "Summarize the data",
             "What are the main insights?",
             "Show me key patterns",
             "Count entries by category",
             "What stands out in this dataset?"
-        ]
+    ]
     
     col1, col2 = st.columns([3, 1])
     
@@ -382,6 +382,11 @@ if data_exists:
                     # Enhanced answer display with better formatting
                     answer_text = response["answer"]
                     
+                    # Clean up any remaining think tags that might have leaked through
+                    if "<think>" in answer_text:
+                        import re
+                        answer_text = re.sub(r'<think>.*?</think>', '', answer_text, flags=re.DOTALL).strip()
+                    
                     # Debug: Show answer length
                     print(f"Answer length: {len(answer_text)} characters")
                     
@@ -410,7 +415,12 @@ if data_exists:
                     else:
                         # Short answer - show with warning
                         st.warning("⚠️ **Short Response Detected**: The AI provided a brief response. This may indicate an issue with the query or data processing.")
-                        st.markdown(answer_text)
+                        if answer_text.strip():
+                            st.markdown(answer_text)
+                        else:
+                            st.error("❌ **Empty Response**: The AI response was empty. Please try rephrasing your question.")
+                            # Show debugging info
+                            st.info("🔍 **Debug Info**: Please check if your environment variables are properly configured.")
                     
                     # Display chart if generated (after the qualitative analysis)
                     if response.get("chart_spec") and response["chart_spec"]:
