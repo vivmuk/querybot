@@ -230,15 +230,15 @@ if data_exists:
                 
                 example_questions.append("What are the most interesting patterns in this data?")
                 
-    except ImportError:
-        # Fallback questions
-    example_questions = [
-        "Summarize the data",
-            "What are the main insights?",
-            "Show me key patterns",
-            "Count entries by category",
-            "What stands out in this dataset?"
-    ]
+        except ImportError:
+            # Fallback questions
+            example_questions = [
+                "Summarize the data",
+                "What are the main insights?",
+                "Show me key patterns",
+                "Count entries by category",
+                "What stands out in this dataset?"
+            ]
     
     col1, col2 = st.columns([3, 1])
     
