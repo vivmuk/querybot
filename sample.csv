@@ -1,0 +1,11 @@
+hcp_id,msl_id,interaction_date,therapeutic_area,insights,sentiment,hcp_name,specialty
+1,101,2024-01-15,Cardiology,Dr. Smith is very interested in new statin therapies and mentioned seeing improved patient outcomes,Positive,Dr. John Smith,Cardiologist
+2,102,2024-01-20,Diabetes,Dr. Johnson expressed concerns about insulin pricing but is open to new GLP-1 options,Neutral,Dr. Sarah Johnson,Endocrinologist
+3,101,2024-02-01,Cardiology,Great discussion about PCSK9 inhibitors and their role in high-risk patients,Positive,Dr. Michael Brown,Cardiologist
+4,103,2024-02-05,Oncology,Dr. Wilson is excited about new immunotherapy combinations and wants more data,Positive,Dr. Lisa Wilson,Oncologist
+5,102,2024-02-10,Diabetes,Discussed CGM technology and its impact on patient management - very positive reception,Positive,Dr. Robert Davis,Endocrinologist
+6,104,2024-02-15,Neurology,Dr. Martinez raised questions about side effects of new Alzheimer treatments,Neutral,Dr. Maria Martinez,Neurologist
+7,101,2024-03-01,Cardiology,Follow-up on statin discussion - Dr. Smith has started prescribing more frequently,Positive,Dr. John Smith,Cardiologist
+8,105,2024-03-05,Psychiatry,Dr. Anderson is interested in novel antidepressants but wants more safety data,Neutral,Dr. James Anderson,Psychiatrist
+9,103,2024-03-10,Oncology,Excellent feedback on CAR-T therapy presentation - high interest from oncology team,Positive,Dr. Lisa Wilson,Oncologist
+10,106,2024-03-15,Rheumatology,Dr. Thompson discussed JAK inhibitors and their place in treatment algorithms,Positive,Dr. Patricia Thompson,Rheumatologist 

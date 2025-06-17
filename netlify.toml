@@ -1,0 +1,11 @@
+[build]
+  command = "echo 'This is a Streamlit app - please deploy to Streamlit Cloud instead'"
+  publish = "."
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build.environment]
+  PYTHON_VERSION = "3.9" 
